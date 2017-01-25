@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.boxA:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.box2 {float: left;}
+.box3 {float: left;}
