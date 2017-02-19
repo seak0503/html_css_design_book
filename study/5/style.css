@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
-body  {font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif}
+body  {
+  margin: 0;
+  font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
+}
 
 /* サイト名 */
 .site h1 a {
@@ -22,7 +25,7 @@ body  {font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif}
 
 .menu li a {
   display: block;
-  padding: 5px;
+  padding: 10px 15px;
   color: #000000;
   font-size: 14px;
   text-decoration: none;
@@ -78,9 +81,25 @@ body  {font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif}
 }
 
 .news time {
-  margin-right: 10px;
   color: #888888;
   font-weight: bold;
+}
+
+.news a:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.news time {
+  float: left;
+  width: 60px;
+}
+
+.news .text {
+  float: none;
+  width: auto;
+  margin-left: 60px;
 }
 
 /* コピーライト */
@@ -88,6 +107,39 @@ body  {font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif}
   margin: 0;
   color: #666666;
   font-size: 14px;
+}
+
+/* BOX5をバーの形にする */
+.box5 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #dddddd;
+}
+
+/* ボックスの左右 */
+.boxA, .box4, .box5 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* ボックスの上下 */
+.boxA {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.box4 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* ##### 599px まで ##### */
+@media (max-width: 599px) {
+  .menu li a {
+    padding: 10px 7px;
+    font-size: 11px;
+  }
+
 }
 
 /* ##### 768px から ##### */
@@ -101,12 +153,30 @@ body  {font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif}
   }
 
   .box1 {float: left;
-    width: 50%;
+    width: auto;
   }
 
-  .box2 {float: left;
-    width: 50%;
+  .box2 {float: right;
+    width: auto;
   }
+}
+
+/* ##### 1190px から ##### */
+@media (min-width: 1190px) {
+
+  /* 全体の横幅を固定 */
+  .box3, .box4, .boxA-inner, .box5-inner {
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* BOX Aの下に罫線を挿入 */
+  .boxA {
+    margin-bottom: 20px;
+    border-bottom: solid 1px #dddddd;
+  }
+
 }
 
 
