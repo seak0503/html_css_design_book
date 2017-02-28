@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+      $(function () {
+        $("#menubtn").click(function () {
+          $("#menu").slideToggle();
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="boxA">
@@ -16,7 +24,11 @@
           </div>
         </div>
         <div class="box2">
-          <nav class="menu">
+          <button type="button" id="menubtn">
+            <i class="fa fa-bars"></i><span>MENU</span>
+          </button>
+
+          <nav class="menu" id="menu">
             <ul>
               <li><a href="#">トップ</a></li>
               <li><a href="#">沿革</a></li>
@@ -30,7 +42,12 @@
     </div>
 
     <div class="box3">
-      <img src="img/header.jpg" alt="" class="topimg">
+      <div class="top">
+        <img src="img/header.jpg" alt="" class="topimg">
+        <p class="catch">TimeSwitchはデータの蓄積と<br>
+        分析・解析のサービスを提供します。</p>
+
+      </div>
     </div>
 
     <div class="box6">

@@ -20,41 +20,30 @@ body  {
   border: none;
 }
 
-/* ナビゲーション */
-.menu ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.menu li a {
-  display: block;
-  padding: 10px 15px;
-  color: #000000;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.menu li a:hover {
-  background-color: #eeeeee;
-}
-
-.menu ul:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.menu li {
-  float: left;
-  width: auto;
-}
-
 /* ヘッダー画像 */
 .topimg {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
+}
+
+/* キャッチコピー */
+.catch {
+  margin: 0;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 28px;
+}
+
+/* ヘッダー画像にキャッチコピーを重ねる */
+.top {
+  position: relative;
+}
+
+.catch {
+  position: absolute;
+  bottom: 7%;
+  left: 3%;
 }
 
 /* 概要 */
@@ -272,17 +261,130 @@ body  {
   padding-bottom: 10px;
 }
 
+/* ##### 359px まで ##### */
+@media (max-width: 359px) {
+
+  /* サイト名 */
+  .site img {
+    width: 225px;
+    height: auto;
+  }
+}
+
+
 /* ##### 599px まで ##### */
 @media (max-width: 599px) {
+
+  /* ナビゲーション */
   .menu li a {
     padding: 10px 7px;
     font-size: 11px;
   }
 
+  /* キャッチコピー */
+  .catch {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+
+/* ##### 767px まで ##### */
+@media (max-width: 767px) {
+
+  /* トグルボタン */
+  #menubtn {
+    padding: 6px 12px;
+    border: solid 1px #aaaaaa;
+    border-radius: 5px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    cursor: pointer;
+  }
+
+  #menubtn:hover {
+    background-color: #dddddd;
+  }
+
+  #menubtn:focus {
+    outline: none;
+  }
+
+  #menubtn i {
+    color: #888888;
+    font-size: 18px;
+  }
+
+  #menubtn span {
+    display: inline-block;
+    text-indent: -9999px;
+  }
+
+  /* ナビゲーションメニュー（縦並び) */
+  #menu {
+    display: none;
+  }
+
+  .menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .menu li a {
+    padding: 5px;
+    color: #000000;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  .menu li a:hover {
+    background-color: #eeeeee;
+  }
 }
 
 /* ##### 768px から ##### */
 @media (min-width: 768px) {
+
+  /* トグルボタン */
+  #menubtn {
+    display: none;
+  }
+
+  /* ナビゲーション */
+  #menu {
+    display: block !important;
+  }
+
+  .menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: #000000;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  .menu li a:hover {
+    background-color: #eeeeee;
+  }
+
+  .menu ul:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .menu li {
+    float: left;
+    width: auto;
+  }
 
   /* BOX1とBOX2を横に並べる設定 */
   .boxA:after {
