@@ -226,38 +226,38 @@ body  {
 }
 
 /* BOX5をバーの形にする */
-.box5 {
+.footer {
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: #dddddd;
 }
 
 /* ボックスの左右 */
-.boxA, .box4, .box5, .box6 {
+.header, .info, .footer, .pickup {
   padding-left: 15px;
   padding-right: 15px;
 }
 
 /* ボックスの上下 */
-.boxA {
+.header {
   padding-top: 20px;
   padding-bottom: 10px;
 }
 
-.box4 {
+.info {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.box4-1 {
+.info-main {
   padding-bottom: 20px;
 }
 
-.box6 {
+.pickup {
   padding-top: 20px;
 }
 
-.box6-1, .box6-2, .box6-3 {
+.pickup-1, .pickup-2, .pickup-3 {
   padding-bottom: 10px;
 }
 
@@ -387,56 +387,56 @@ body  {
   }
 
   /* BOX1とBOX2を横に並べる設定 */
-  .boxA:after {
+  .header:after {
     content: "";
     display: block;
     clear: both;
   }
 
-  .box1 {float: left;
+  .header-site {float: left;
     width: auto;
   }
 
-  .box2 {float: right;
+  .header-nav {float: right;
     width: auto;
   }
 
   /* BOX4-1とBOX4-2を横に並べる設定 */
-  .box4:after {
+  .info:after {
     content: "";
     display: block;
     clear: both;
   }
 
-  .box4-1 {
+  .info-main {
     float: left;
     width: 70%;
     padding-right: 35px;
     box-sizing: border-box;
   }
 
-  .box4-2 {
+  .info-sub {
     float: left;
     width: 30%;
   }
 
   /* BOX6-1、BOX6-2、BOX6-3を横に並べる設定 */
-  .box6:after {
+  .pickup:after {
     content: "";
     display: block;
     clear: both;
   }
-  .box6-1 {
+  .pickup-1 {
     float: left;
     width: 32%;
     margin-right: 2%;
   }
-  .box6-2 {
+  .pickup-2 {
     float: left;
     width: 32%;
     margin-right: 2%;
   }
-  .box6-3 {
+  .pickup-3 {
     float: left;
     width: 32%;
   }
@@ -446,14 +446,14 @@ body  {
 @media (min-width: 1190px) {
 
   /* 全体の横幅を固定 */
-  .box3, .box4, .boxA-inner, .box5-inner, .box6 {
+  .photo, .info, .header-inner, .footer-inner, .pickup {
     width: 1140px;
     margin-left: auto;
     margin-right: auto;
   }
 
   /* BOX Aの下に罫線を挿入 */
-  .boxA {
+  .header {
     margin-bottom: 20px;
     border-bottom: solid 1px #dddddd;
   }
