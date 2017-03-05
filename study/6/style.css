@@ -227,12 +227,82 @@ body  {
 .kiji h1 {
 	margin-top: 0;
 	margin-bottom: 20px;
+	padding-left: 20px;
+	border-left: solid 20px #c50018;
 	font-size: 36px;
+	font-weight: normal;
+}
+
+.kiji h2 {
+	margin-top: 50px;
+	margin-bottom: 20px;
+	border-bottom: solid 1px #dddddd;
+	font-size: 28px;
+	font-weight: normal;
+}
+
+.kiji h2 i {
+	margin-right: 7px;
+	color: #888888;
 }
 
 .kiji p {
+	max-width: 640px;
 	margin-top: 0;
 	margin-bottom: 20px;
+}
+
+.kiji .lead {
+	max-width: 100%;
+	font-size: 20px;
+	color: #666666;
+}
+
+.kijiimg {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+/* パンくずリスト */
+.bread {
+	margin-bottom: 20px;
+}
+
+.bread ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.bread li a {
+	display: inline-block;
+	padding: 5px;
+	color: #000000;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.bread li a:hover {
+	background-color: #eeeeee;
+}
+
+.bread ol:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.bread li {
+	float: left;
+	width: auto;
+}
+
+.bread li:after {
+	content: '\003e';
+	margin-left: 10px;
+	margin-right: 10px;
+	color: #888888;
 }
 
 /* サイドメニュー */
@@ -332,6 +402,19 @@ body  {
 	.catch	{
 		padding: 5px 10px;
 		font-size: 12px;
+	}
+
+	/* 記事 */
+	.kiji h1 {
+		font-size: 26px;
+	}
+
+	.kiji h2 {
+		font-size: 20px;
+	}
+
+	.kiji lead {
+		font-size: 16px;
 	}
 }
 
